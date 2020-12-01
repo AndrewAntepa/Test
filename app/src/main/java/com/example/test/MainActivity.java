@@ -33,13 +33,6 @@ public class MainActivity extends AppCompatActivity {
         intent_answer = new Intent(MainActivity.this, Question2.class);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
-
     public void answer(View v){
         if (q2.isChecked()) result++;
         intent_answer.putExtra("result1", result);
