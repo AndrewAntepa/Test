@@ -21,15 +21,13 @@
         android:text="@string/question_1"
         android:textSize="25sp"
         android:layout_marginStart="25dp"
-        android:layout_marginEnd="25sp"
-        android:id="@+id/question_1_text" />
+        android:layout_marginEnd="25sp"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/question1">
+        android:layout_gravity="center_horizontal">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

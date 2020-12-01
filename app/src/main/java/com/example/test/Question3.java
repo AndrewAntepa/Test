@@ -11,7 +11,7 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class Question3 extends AppCompatActivity {
-    RadioButton q1, q2, q3, q4;
+    RadioButton q3;
     Button button_answer;
     Intent intent;
     public static final String RESULT = "result";
@@ -24,10 +24,7 @@ public class Question3 extends AppCompatActivity {
         setContentView(R.layout.activity_question3);
 
         button_answer = findViewById(R.id.bottom_answer);
-        q1 = findViewById(R.id.q3_1);
-        q2 = findViewById(R.id.q3_2);
         q3 = findViewById(R.id.q3_3);
-        q4 = findViewById(R.id.q3_4);
         intent = new Intent(Question3.this, Question4.class);
         result = getIntent().getIntExtra(RESULT, 0);
     }

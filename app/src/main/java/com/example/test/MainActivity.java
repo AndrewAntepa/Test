@@ -18,9 +18,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    RadioButton q1, q2, q3, q4;
+    RadioButton q2;
     Button button_answer;
-    Intent intent_answer, intent_about;
+    Intent intent_answer;
     int result = 0;
 
     @Override
@@ -29,10 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button_answer = findViewById(R.id.bottom_answer);
-        q1 =findViewById(R.id.q1_1);
         q2 =findViewById(R.id.q1_2);
-        q3 =findViewById(R.id.q1_3);
-        q4 =findViewById(R.id.q1_4);
         intent_answer = new Intent(MainActivity.this, Question2.class);
     }
 
@@ -40,23 +37,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        super.onOptionsItemSelected(item);
-        switch (item.getItemId()){
-            case R.id.exit_item:
-                //TODO завершение активности
-                finish();
-                break;
-                case R.id.about_menu:
-                    //TODO переход на AboutActivity
-                    intent_about = new Intent(MainActivity.this, AboutActivityTest.class);
-                    startActivity(intent_about);
-                    break;
-        }
         return true;
     }
 

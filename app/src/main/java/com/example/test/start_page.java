@@ -1,9 +1,11 @@
 package com.example.test;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -11,7 +13,7 @@ import android.widget.ImageButton;
 public class start_page extends AppCompatActivity {
 
     ImageButton enter;
-    Intent intent;
+    Intent intent, intent_about;
 
 
     @Override
@@ -21,6 +23,23 @@ public class start_page extends AppCompatActivity {
 
         enter = findViewById(R.id.enter);
         intent = new Intent(start_page.this, MainActivity.class);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+        switch (item.getItemId()){
+            case R.id.exit_item:
+                //TODO завершение активности
+                finish();
+                break;
+            case R.id.about_menu:
+                //TODO переход на AboutActivity
+                intent_about = new Intent(start_page.this, AboutActivityTest.class);
+                startActivity(intent_about);
+                break;
+        }
+        return true;
     }
 
     public void enter(View v){
